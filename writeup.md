@@ -19,6 +19,14 @@ Some details:
 * The slope of lane segments will fall into a relatively narrow range, for example, we don't need consider slope 0.1 or 10.
 * There are multiple ways for extrapolating, I found that `cv2.FitLine` is easy to use. Internally `cv2.FitLine` uses liner regression to fit the points.
 
+Here are some example output below. Please check `test_images_output` and `test_videos_output` directories for all of them.
+
+[solidWhiteRight]: ./test_images_output/solidWhiteRight.jpg "solidWhiteRight"
+[solidYellowCurve]: ./test_images_output/solidYellowCurve.jpg "solidYellowCurve"
+
+![alt text][solidWhiteRight]
+![alt text][solidYellowCurve]
+
 ### Potential shortcomings with current pipeline
 
 When testing on static images, everything looks good. But when running on videos, it's easy to notice that the lanes are jittering, sometimes significantly.

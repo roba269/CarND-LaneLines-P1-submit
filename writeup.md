@@ -1,6 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
-This is a write-up for Project 1 - Finding Lane Lines in Udacity's Self Driving Car Nanodegree program.
+This is a write-up for Project 1 - Finding Lane Lines in Udacity's Self Driving Car Nanodegree program by Liang He.
 
 ### Pipeline description
 
@@ -34,3 +34,6 @@ A possible improvement for the jittery motion can be taking previous frames into
 The parameters of Canny detection and Hough transformation can be more finely turned. Though I took lot of effort tuning them, I think there is still room for improvement.
 
 We should try to eliminate the hard-coded values when possible.
+
+Regarding segments extrapolation, I think there are more sophisticated approaches than liner regression.
+

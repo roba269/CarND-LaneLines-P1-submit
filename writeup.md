@@ -17,14 +17,14 @@ Some details:
 * By coverting images to HSV space, it's easier to fetch yellow color mask, and the result is slightly better.
 * We can set two regions for left lane and right lane separately, so that when doing extrapolation, we can avoid clustering two groups of segments explicitely.
 * The slope of lane segments will fall into a relatively narrow range, for example, we don't need consider slope 0.1 or 10.
-* There are multiple ways for extrapolating, I found that `cv2.FitLine` is easy to use. Internally `cv2.FitLine` uses liner regression to fit the points.
+* There are multiple ways for extrapolating, I found that `cv2.FitLine` is easy to use. Internally `cv2.FitLine` uses linear regression to fit the points.
 
 Here are some example output below. Please check `test_images_output` and `test_videos_output` directories for all of them.
 
-[solidWhiteRight]: ./test_images_output/solidWhiteRight.jpg "solidWhiteRight"
+[solidWhiteCurve]: ./test_images_output/solidWhiteCurve.jpg "solidWhiteCurve"
 [solidYellowCurve]: ./test_images_output/solidYellowCurve.jpg "solidYellowCurve"
 
-![alt text][solidWhiteRight]
+![alt text][solidWhiteCurve]
 ![alt text][solidYellowCurve]
 
 ### Potential shortcomings with current pipeline
@@ -43,5 +43,5 @@ The parameters of Canny detection and Hough transformation can be more finely tu
 
 We should try to eliminate the hard-coded values when possible.
 
-Regarding segments extrapolation, I think there are more sophisticated approaches than liner regression.
+Regarding segments extrapolation, I think there are more sophisticated approaches than linear regression.
 
